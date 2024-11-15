@@ -1,1 +1,1 @@
-this is my journey towards learning JavaScript
+# this is my journey towards learning JavaScript
