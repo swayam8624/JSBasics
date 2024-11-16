@@ -2,6 +2,7 @@ const accountId = 144553
 let accountEmail = "swayam.singal@yahoo.com"
 var accountPass = "12345"
 accountCity = "Jaipur"
+let accountState
 
 // accountId = 2 // not allowed
 accountEmail = "hahha@gmail.com"
@@ -15,4 +16,4 @@ because of issue in block scope and functional scope
 
 console.log(accountId)
 
-console.table([accountEmail , accountPass , accountId , accountCity])
+console.table([accountEmail , accountPass , accountId , accountCity , accountState])
