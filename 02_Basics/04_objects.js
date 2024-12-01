@@ -46,3 +46,29 @@ console.log(tinderUser.hasOwnProperty('isLoggedin'));
 
 // Js is case sensitive
 // to check if iterable or not , use propertyIsEnumerable()
+
+const course = {
+    coursename : "JsBasics",
+    platform:"github+yt",
+    price:"0"
+}
+
+// course.coursename
+const {coursename : name , platform} = course // destructuring object , mainly used for props in react
+console.log(name)
+console.log(platform)
+// arrays can also be destructured
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+
+// JSON = JavaScript Object Notation -- for API Call
+/*
+{
+    "name":"swayam",
+    "coursename" : "jsbasic", // here keys are also specified in ""
+    "price" : "free"
+}
+*/
+
+// can also be arrays of objects [{},{},{}]
+// can be anything , object of arrays of obj and objects of arr .. etc
