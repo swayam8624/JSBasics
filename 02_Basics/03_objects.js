@@ -35,6 +35,3 @@ JsUser.greeting2 = function(){
 }
 JsUser.greeting2()
 console.log(JsUser.greeting2)
-
-
-// Object Constructor
