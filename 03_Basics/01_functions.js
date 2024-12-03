@@ -51,3 +51,32 @@ function loginwithifdefault(username = "Sam")
 }
 console.log(loginwithifdefault())
 console.log(loginwithifdefault("Swayam"))
+
+
+//what if we dont know how many values in the argument? --> use ...(rest or spread operator)
+function calculatecartprice(...num1){
+    return num1
+}
+
+console.log(calculatecartprice(200,400,500))
+// suppose u use parameter (a , b , ...num) , it takes all in array except first and second that goes to a and b resp.
+
+const user = {
+    username: " swayam",
+    price: 199
+}
+function handleObject(anyObj){
+    console.log(`Username is ${anyObj.username} , and Price is ${anyObj.price}`)
+}
+
+handleObject(user)
+handleObject({username:"sam" , price:399})
+
+const arr = [200,400,100,600]
+
+function returnsecarr(getarr){
+    return getarr[1]
+}
+
+console.log(returnsecarr(arr))
+console.log(returnsecarr([100,1000,10000,100000]))
