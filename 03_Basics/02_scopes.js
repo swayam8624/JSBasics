@@ -22,3 +22,48 @@ if(true){
 }
 console.log(a)
 // node scope and browser code scope are different
+
+
+// local can access global but not vice versa
+function one(){
+    const username = "swayam"
+
+    function two(){
+        const website = "youtube"
+        console.log(username)
+    }
+    // console.log(website)
+    // // Error -->     console.log(website)
+    // //              ReferenceError: website is not defined
+    two()
+}
+one()
+
+if(true)
+{
+    const username = "Swayam"
+    if(username == "Swayam"){
+        const website = " Youtube"
+        console.log(username+website)
+    }
+    // console.log(website) same error as above
+    console.log(username)
+}
+
+// console.log(username) also gives error as global access to local variable 
+
+// ---------------------------Interesting----------------------------------------------------
+
+addone(5) // also would get executed as func definition is present
+function addone(n)
+{
+    return n+1
+}
+addone(5) // executes properly
+
+// addTow(5) // wont get executed as variable function hoisting is after it
+const addTow = function(n){
+    return n+2
+}
+
+addTow(5) // executes properly
