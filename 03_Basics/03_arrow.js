@@ -28,6 +28,19 @@ const chai2 = function()
 // but in function this.variable does not work
 
 
+// Execution in Call Stack
+// Three types of Execution context -> Global , Function , Eval
+/*
+
+1-> this stores the global execution context 
+2-> Memory Phase -> allocation to the literals/function def etc in stack or heap
+3-> Execution Phase -> assigning values to the memory allocated -> (new execution context + exe thread + new variable env)
+4-> Reiterate 1 2 3 for new env , context -> function , literals memory -> locals , references etc , execution phase , return back to global exe context
+5-> deletion of function execution context , assignment of results -> (return values)
+
+*/
+
+
 // -------------Arrow Function-----------------------------------
 
 const chai3 = ()=> {
