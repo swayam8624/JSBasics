@@ -13,25 +13,25 @@
 </body>
 
 <script>
-    // function init() {
-    //     let name = "Mozilla";
-    //     function displayName() {
-    //         console.log(name);
-    //     } 
-    //     displayName();
-    // }
-    // init();
-
+    function init() {
+        let name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        } 
+        displayName();
+    }
+    init();
+// Lexical Scoping
     function outer(){
         let username = "swayam"
-        console.log("OUTER", secret);
+        console.log("OUTER", secret); // outer does not get ref of inner local
         function inner(){
             let secret = "my123"
             console.log("inner", username);
         }
         function innerTwo(){
             console.log("innerTwo", username);
-            console.log(secret);
+            console.log(secret); // does not get ref of other inner
         }
         inner()
         innerTwo()
@@ -49,17 +49,17 @@
         return displayName;
     }
 
-    const myFunc = makeFunc();
+    const myFunc = makeFunc(); // entire lexical scope is going to the memory , not just the inner function ref scope
     myFunc();
 
 </script>
 <script>
-    document.getElementById("orange").onclick = function(){
-        document.body.style.backgroundColor = `orange`
-    }
-    document.getElementById("green").onclick = function(){
-        document.body.style.backgroundColor = `green`
-    }
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = `green`
+    // }
 
     function clickHandler(color) {
         document.body.style.backgroundColor = `${color}`
